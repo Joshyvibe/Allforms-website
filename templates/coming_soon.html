@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <title>Coming Soon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@600&display=swap');
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-size:contain;
+      background-color:red;
+      align-items: center;
+      height: 100vh;
+      background-image: url('{% static "img/anwrk2.png" %}');
+      background-color: #156884;
+      transition: background-color 0.3s ease;
+      
+    }
+
+    .coming-soon-container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #fafafa;
+    }
+
+    .countdown {
+      font-size: 34px;
+      font-weight: 300;
+      color: #de2c2c;
+    }
+
+    .subscribe-form {
+      margin-top: 20px;
+    }
+
+    input[type="email"] {
+        padding: 1em; /* Use em for relative padding */
+        width: 60%; /* Use a percentage for relative width */
+        max-width: 300px; /* Set a maximum width if needed */
+        border: 0.1em solid #ccc; /* Use em for relative border width */
+        border-radius: 0.5em; /* Use em for relative border-radius */
+        margin-right: 1em; /* Use em for relative margin */
+        
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    label{
+        color: #fafafa;
+        font-size: small;
+    }
+
+
+    
+    .subscribe-btn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1em; /* Use em for relative font size */
+      color: #ffffff;
+      padding: 1em 1.5em; /* Use em for relative padding */
+      background-color: #457c35;
+      margin-top: 1em;
+      border-radius: 0.5em; /* Use em for relative border-radius */
+      border: 0.1em solid #457c35; /* Use em for relative border width */
+      cursor: pointer; /* Add cursor pointer to indicate interactivity */
+    }
+
+    .subscribe-btn:hover {
+      background-color: #25481b;
+      border: 0.1em solid #25481b;
+    }
+
+    /* Optional: Apply responsive styles for smaller screens if needed */
+    @media (max-width: 600px) {
+    input[type="email"] {
+        width: 100%; /* Adjust width for smaller screens */
+        margin-right: 0; /* Remove margin on smaller screens */
+    }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="coming-soon-container">
+    <h1>🧑🏼‍🔧Coming Soon🧑🏼‍🔧</h1>
+    
+    <div class="countdown" id="countdown"></div>
+    
+
+    <div class="subscribe-form">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <label for="email">Subscribe to get updates:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        <button class="subscribe-btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Replace the targetDate with your actual launch date
+    const targetDate = new Date('2024-03-01T00:00:00').getTime();
+
+    const countdownElement = document.getElementById('countdown');
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "We're Live!";
+      }
+    }
+
+    // Update countdown every second
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Initial call to display countdown immediately
+    updateCountdown();
+  </script>
+  <script type="text/javascript">
+    (function(){
+    emailjs.init("iMETk6vypHYdw_uwi");
+    })();
+</script>
+<script>
+    function sendEmail() {
+        var getEmail = document.getElementById("email").value;
+        const serviceID = "service_bf3m3vr"; 
+        const templateID = "template_ince06l"; 
+
+        // Create an object with the data to send
+        const templateParams = {
+            email: getEmail,
+            // Add other template parameters if needed
+        };
+
+        emailjs.send(serviceID, templateID, templateParams)
+            .then((res) => {
+                // Clear the input field
+                console.log(res);
+                alert("Your email was received successfully.");
+            })
+            .catch((err) => console.log(err));
+    }
+
+   
+</script>
+
+</body>
+</html>

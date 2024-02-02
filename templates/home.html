@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/utility.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/utility.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/responsive.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/allforms-favicon-color.png' %}" type="image/x-icon" />
+
+    <link rel="stylesheet" href="{% static 'styles/components/home-header.css' %}">
+    
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- hero-section start -->
+
+
+
+
+    <header class="header container">
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/allforms_logo.png' %}" alt="">.</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <!-- <div class="hero-text">
+            <br>Committed to a mission<br>Pioneering tech innovations in Africa<br>Dedicated to transforming Africa through technology
+        </div> -->
+    </header>
+
+
+
+    <!-- hero-section end -->
+
+    <main>
+        
+
+        <!-- company-section end -->
+
+        <!-- project-section start -->
+        <br><br><br>
+        
+
+        <section id="project-section">
+            <h1 class="latest-news">Latest Projects</h1>
+
+            <div id="card">
+                <div id="slideWrapper">
+
+                    <div class="image-slide-1">
+                        <a href="{% url 'coming_soon' %}" target="_blank">
+                            <img class="project-image" src="{% static 'img/anwrk.png' %}" alt="">
+                            <button class="latest-proj-btn">Go to site</button>
+                            
+                        </a>
+                        
+                    </div>
+                    <!-- <div class="project-1">Project 1</div>
+                    <div class="project-description">
+                        A develop tool or system that enhances cybersecurity, such as an intrusion detection system or a
+                        secure communication
+                        platform. Explore blockchain technology and develop a decentralized application (DApp).
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+        <br><br>
+
+        <!-- project-section start -->
+
+        <!-- news-section start -->
+       
+
+        <h2 class="latest-news">Latest News</h2>
+        <section class="blog_posts_container ">
+            {% for tweet in tweets %}
+            <div class="blog_post">
+                <div class="img_pod">
+                <img class="img-blog" src="{{ tweet.2 }}" alt="random image">
+                </div>
+                <div class="container_copy">
+                <h3 class="h3-blob">{{ tweet.3 }}</h3>
+                <h1 class="h1-blog">@allformsltd(Twitter)</h1>
+                <p class="p-blog">{{ tweet.1 }}</p>
+                <a class="btn_primary-blog" href='{{ tweet.0 }}' target="_blank">Read More</a>
+                </div>
+            
+        </div>
+        {% endfor %}
+
+        </section>
+        
+
+        <!-- news-section end -->
+
+    <br><br>
+    </main>
+
+
+    <!-- footer-start -->
+    <footer id="footer">
+        <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/allforms_logo.png' %}" alt="">.</a>
+        <div class="footer-contaier">
+            <div class="footer-heading">NEWSLETTER</div>
+            <div class="footer-description">
+                Want to know what we're up to? Signup for the News letter and join our
+                community.
+            </div>
+            <br>
+            <div id="subcribe">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                   <br>
+                    <input type="email" id="email" placeholder="Enter your email here" autocomplete="email" required>
+                    <br><br>
+                    <button class="subscribe-btn" type="submit">Subscribe</button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="conatct-info">
+            <div class="connect">CONTACT</div>
+            <a href="mailto:founders@allformslimited.com" class="visible">founders@allformslimited.com</a>
+            <br><br>
+            <div class="social-page">
+                <a href="mailto:founders@allformslimited.com"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="tel:+2348137343312"><i class="fas fa-phone fa-2x"></i></a>
+                <a href="https://web.facebook.com/allformsltd/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com/allformsltd" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.linkedin.com/company/allforms-limited/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.instagram.com/allformsltd/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+    <script src="{% static 'script/main.js' %}"></script>
+    <script src="{% static 'script/header.js' %}"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("iMETk6vypHYdw_uwi");
+        })();
+    </script>
+    <script>
+        function sendEmail() {
+            var getEmail = document.getElementById("email").value;
+            const serviceID = "service_bf3m3vr"; // Replace with your actual service ID
+            const templateID = "template_ince06l"; // Replace with your actual template ID
+
+            // Create an object with the data to send
+            const templateParams = {
+                email: getEmail,
+                // Add other template parameters if needed
+            };
+
+            emailjs.send(serviceID, templateID, templateParams)
+                .then((res) => {
+                    // Clear the input field
+                    console.log(res);
+                    alert("Your email was received successfully.");
+                })
+                .catch((err) => console.log(err));
+        }
+
+       
+    </script>
+    
+</body>
+
+</html>

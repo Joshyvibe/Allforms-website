@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&family=Roboto:wght@400;500;700&display=swap");
+
+root {
+  --primary-clr: #4d7e3e;
+  --white: #ffffff;
+  --shade-of-black: #253529;
+  --shade-of-white: #f5f5dc;
+  --news-date-clr: rgba(0, 0, 0, 0.5);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: red; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: visible;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  /* font-family: "Roboto Flex", sans-serif; */
+}
+
+/* about us styles start */
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aboutUS {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-heading {
+  width: 94px;
+  height: 33px;
+  color: var(--shade-of-black);
+  font-family: Roboto Condensed;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px; /* 180% */
+  margin: 0 auto;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.about-mission-section,
+.about-value-section {
+  width: 320px;
+  height: 274px;
+  border-radius: 0px 0px 50px 0px;
+  border: 0.995px solid var(--shade-of-white);
+  box-shadow: 3.978px 3.978px 1.989px 4.973px rgba(77, 126, 62, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub_heading {
+  text-align: center;
+  font-size: 22.617px;
+  font-weight: 500;
+  line-height: 20px; /* 90% */
+  margin-bottom: 20px;
+}
+
+.about-description {
+  width: 273px;
+  height: 166px;
+  color: var(--Shade-of-black);
+  text-align: justify;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.07px;
+}
+
+.abouts-us-3 {
+  margin-bottom: 38px;
+}
+
+.story_section {
+  width: 340px;
+  height: 342px;
+  color: var(--shade-of-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.our-story-heading {
+  width: 75px;
+  height: 25px;
+  text-align: center;
+  font-family: Roboto Condensed;
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 40px;
+}
+
+.our-story-description {
+  /* width: 310px;
+  height: 271px; */
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.07px;
+}
+
+@media (min-width: 475px) {
+  /* body {
+    background-color: red;
+  } */
+}
+
+@media (min-width: 640px) {
+  /* body {
+    background-color: rgb(76, 0, 255);
+  } */
+  .about-mission-section,
+  .about-value-section {
+    width: 480px;
+  }
+
+  .about-description {
+    width: 380px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .our-story-description {
+    width: 400px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; /* 171.429% */
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* body {
+    background-color: rgb(217, 255, 0);
+  } */
+  #aboutUS {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .about-us {
+    width: 94px;
+    height: 33px;
+    color: var(--shade-of-black);
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    margin-bottom: 46px;
+  }
+
+  .about-mission-section,
+  .about-value-section {
+    width: 220px;
+    height: 212px;
+  }
+
+  .about-description {
+    width: 180px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .about-description {
+    width: 186px;
+    height: 132px;
+    font-family: Roboto Flex;
+    font-size: 11.308px;
+    font-weight: 500;
+    line-height: 18.093px;
+    margin-block: 0px;
+  }
+
+  .story_section {
+    width: 604px;
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+  }
+
+  .value-section {
+    margin-block: 6px;
+  }
+
+  .about-page-description {
+    width: 604px;
+    height: 844px;
+    text-align: justify;
+    font-family: Roboto Flex;
+    font-size: 11.308px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.093px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* body {
+    background-color: rgb(255, 0, 200);
+  } */
+  #aboutUS {
+    gap: 30px;
+  }
+
+  .about-mission-section,
+  .about-value-section {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* body {
+    background-color: rgb(0, 255, 255);
+  } */
+  #aboutUS {
+    gap: 32px;
+  }
+
+  .about-mission-section,
+  .about-value-section {
+    width: 320px;
+  }
+}

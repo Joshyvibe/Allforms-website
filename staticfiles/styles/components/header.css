@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@600&display=swap');
+
+root {
+  --primary-clr: #4d7e3e;
+  --white: #ffffff;
+  --shade-of-black: #253529;
+  --shade-of-white: #f5f5dc;
+  --news-date-clr: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* basic styles for other element */
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+/* .nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+} */
+
+/* basic styles for other element */
+
+/* header and navbar */
+.hero {
+  height: 80px;
+  background-color: var(--primary-clr);
+  color: var(--white);
+}
+
+.navbar {
+  display: flex;
+  font-family: 'Space Grotesk', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  margin: 0 auto;
+}
+/* header and navbar */
+
+/* .hamburger */
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+/* .hamburger */
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .header {
+    height: 200px;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+    
+  }
+
+  .nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--shade-of-white);
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

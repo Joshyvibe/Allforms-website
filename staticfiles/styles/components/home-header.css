@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@600&display=swap');
+
+root {
+  --primary-clr: #4d7e3e;
+  --white: #ffffff;
+  --shade-of-black: #253529;
+  --shade-of-white: #f5f5dc;
+  --news-date-clr: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero-text {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  background-color: rgba(38, 62, 33, 0.568);
+
+}
+
+/* basic styles for other element */
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #482ff7;
+}
+
+.nav-logo img {
+  width: 160px;
+  font-weight: 500;
+  margin-right: 70px;
+  color: #482ff7;
+}
+
+/* basic styles for other element */
+
+/* header and navbar */
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-image: url("./tech-hero.png");
+  background-size: 100% 100%;
+  color: var(--white);
+
+}
+.header-about {
+  border-bottom: 1px solid #e2e8f0;
+  height: 550px;
+  background-image: url("./hero-about.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: var(--white);
+}
+
+
+
+.about-hero-h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 80px;
+  color: #131010;
+}
+
+.about-p {
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.5;
+  white-space: pre-line; 
+  text-align: center;
+  color: #131010;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0 auto;
+}
+/* header and navbar */
+
+/* .hamburger */
+
+.hamburger {
+  display: none;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+/* .hamburger */
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .header {
+    height: 200px;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .hero-text {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+ .about-hero-h1{
+  font-size: 30px;
+ }
+
+ .about-p{
+  font-size: 12.5px;
+ }
+  .nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--shade-of-white);
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

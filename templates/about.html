@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/utility.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/team.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/header.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/home-header.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/allforms-favicon-color.png' %}" type="image/x-icon" />
+    <title>Team</title>
+</head>
+
+<body>
+    <!-- hero-section start -->
+
+
+    <header class="header-about">
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/allforms_logo.png' %}" alt="">.</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+         <div class="hero-text-about">
+            <h1 class="about-hero-h1">Tech Solutions for Africa's Progress</h1>
+            <p class="about-p">
+                AllForms is a technology company dedicated to addressing challenges 
+                faced by Africans through innovative software solutions. Our 
+                mission is to be at the forefront of technological advancements 
+                that propel Africa's progress. We strive to empower communities, 
+                drive economic development, and contribute to the continent's 
+                global competitiveness.
+            </p>
+        </div>
+    </header>
+
+
+    <!-- hero-section end -->
+    <main id="teamContainer">
+
+        <!-- team section begin -->
+        <sectiom id="team">
+            <h2 class="our-perfect-team">Our Perfect Team</h2>
+            <p class="about-p">
+                Our team is diverse and cohesive, striving to create 
+                something enduring while constantly learning new things.
+            </p>
+
+            <div class="card-content-holder">
+                <!-- unflipCard-1 -->
+                <div id="unflipCard">
+                    <div class="card-conatiner">
+                        <div class="img-conatiner"><img class="img" src="{% static 'img/cto.svg' %}" alt=""></div>
+                        <div class="white-card">
+                            <div class="name">Obinna Akpulonu</div>
+                            <div class="role">CTO/CEO, Co founder</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- unflipCard-1 -->
+                <!-- <div id="flipCard" class="slide-up">
+                    <div class="flipcard-wraper">
+                        <div class="biography">Biography</div>
+                        <div class="description">
+                            <div class="description-1">
+                                Alex pursued a Bachelor's degree in Computer Science at Stanford University,
+                                where they excelled academically and became
+                                actively involved in various tech projects. This period marked the beginning of
+                                Alex's
+                                entrepreneurial spirit, as they
+                                founded a startup with classmates that gained attention for its cutting-edge
+                                software
+                                solutions.
+                            </div>
+                        </div>
+                        <button class="exit-button" onclick="showUnflipCard()">Exit</button>
+                    </div>
+                </div> -->
+
+                <!-- unflipCard-2 -->
+                <div id="unflipCard">
+                    <div class="card-conatiner">
+                        <div class="img-conatiner"><img class="img" src="{% static 'img/coo.svg' %}" alt=""></div>
+                        <div class="white-card">
+                            <div class="name">Alex Iroko</div>
+                            <div class="role">COO, Co founder</div>
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- unflipCard-3 -->
+                <div id="unflipCard">
+                    <div class="card-conatiner">
+                        <div class="img-conatiner"><img class="img" src="{% static 'img/prudy.svg' %}" alt=""></div>
+                        <div class="white-card">
+                            <div class="name">Prudence Ugochukwu</div>
+                            <div class="role">Project Manager</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- unflipCard-3 -->
+                <div id="unflipCard">
+                    <div class="card-conatiner">
+                        <div class="img-conatiner"><img class="img" src="{% static 'img/frontend_lead.svg' %}" alt=""></div>
+                        <div class="white-card">
+                            <div class="name">Ridwan Oyenuga</div>
+                            <div class="role">Front-End Engineer</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- unflipCard-3 -->
+                <div id="unflipCard">
+                    <div class="card-conatiner">
+                        <div class="img-conatiner"><img class="img" src="{% static 'img/prd_designer.svg' %}" alt=""></div>
+                        <div class="white-card">
+                            <div class="name">Philip Adewale</div>
+                            <div class="role">UI/UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- unflipCard-3 -->
+                <div id="unflipCard">
+                    <div class="card-conatiner">
+                        <div class="img-conatiner"><img class="img" src="{% static 'img/misoma.svg' %}" alt=""></div>
+                        <div class="white-card">
+                            <div class="name">Misoma Abayeh</div>
+                            <div class="role">Quality Assurance Engineer</div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+            
+            </div>
+
+
+        </section>
+
+        <!-- team section end -->
+
+
+
+    </main>
+
+    <!-- footer-start -->
+    <footer id="footer">
+        <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/allforms_logo.png' %}" alt="">.</a>
+        <div class="footer-contaier">
+            <div class="footer-heading">NEWSLETTER</div>
+            <div class="footer-description">
+                Want to know what we're up to? Signup for the News letter and join our
+                community.
+            </div>
+            <br>
+            <div id="subcribe">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                   <br>
+                    <input type="email" id="email" placeholder="Enter your email here" autocomplete="email" required>
+                    <br><br>
+                    <button class="subscribe-btn" type="submit">Subscribe</button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="conatct-info">
+            <div class="connect">CONTACT</div>
+            <a href="mailto:founders@allformslimited.com" class="visible">founders@allformslimited.com</a>
+            <br><br>
+            <div class="social-page">
+                <a href="mailto:founders@allformslimited.com"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="tel:+2348137343312"><i class="fas fa-phone fa-2x"></i></a>
+                <a href="https://web.facebook.com/allformsltd/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com/allformsltd" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.linkedin.com/company/allforms-limited/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.instagram.com/allformsltd/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- footer-end -->
+    <script src="{% static 'script/main.js' %}"></script>
+    <script src="{% static 'script/header.js' %}"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("iMETk6vypHYdw_uwi");
+        })();
+    </script>
+    <script>
+        function sendEmail() {
+            var getEmail = document.getElementById("email").value;
+            const serviceID = "service_bf3m3vr"; 
+            const templateID = "template_ince06l"; 
+
+            // Create an object with the data to send
+            const templateParams = {
+                email: getEmail,
+                // Add other template parameters if needed
+            };
+
+            emailjs.send(serviceID, templateID, templateParams)
+                .then((res) => {
+                    // Clear the input field
+                    console.log(res);
+                    alert("Your email was received successfully.");
+                })
+                .catch((err) => console.log(err));
+        }
+
+       
+    </script>
+</body>
+
+</html>
