@@ -19,7 +19,8 @@
     <!-- hero-section start -->
 
 
-    <header class="header-about">
+    <header class="header">
+        <br>
         <nav class="navbar">
             <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/allforms_logo.png' %}" alt="">.</a>
             <ul class="nav-menu">
@@ -37,7 +38,7 @@
             </div>
         </nav>
 
-         <div class="hero-text-about">
+         <div>
             <h1 class="about-hero-h1">Tech Solutions for Africa's Progress</h1>
             <p class="about-p">
                 AllForms is a technology company dedicated to addressing challenges 
@@ -55,7 +56,7 @@
     <main id="teamContainer">
 
         <!-- team section begin -->
-        <sectiom id="team">
+        <section id="team">
             <h2 class="our-perfect-team">Our Perfect Team</h2>
             <p class="about-p">
                 Our team is diverse and cohesive, striving to create 
@@ -65,11 +66,11 @@
             <div class="card-content-holder">
                 <!-- unflipCard-1 -->
                 <div id="unflipCard">
-                    <div class="card-conatiner">
-                        <div class="img-conatiner"><img class="img" src="{% static 'img/cto.svg' %}" alt=""></div>
+                    <div class="card-container">
+                        <div class="img-container"><img class="img" src="{% static 'img/cto.svg' %}" alt=""></div>
                         <div class="white-card">
                             <div class="name">Obinna Akpulonu</div>
-                            <div class="role">CTO/CEO, Co founder</div>
+                            <div class="role">CTO, Co founder</div>
                         </div>
                     </div>
                 </div>
@@ -95,11 +96,11 @@
 
                 <!-- unflipCard-2 -->
                 <div id="unflipCard">
-                    <div class="card-conatiner">
-                        <div class="img-conatiner"><img class="img" src="{% static 'img/coo.svg' %}" alt=""></div>
+                    <div class="card-container">
+                        <div class="img-container"><img class="img" src="{% static 'img/coo.svg' %}" alt=""></div>
                         <div class="white-card">
                             <div class="name">Alex Iroko</div>
-                            <div class="role">COO, Co founder</div>
+                            <div class="role">COO/CEO, Co founder</div>
                         </div>
                     </div>
                 </div>
@@ -107,8 +108,8 @@
 
                 <!-- unflipCard-3 -->
                 <div id="unflipCard">
-                    <div class="card-conatiner">
-                        <div class="img-conatiner"><img class="img" src="{% static 'img/prudy.svg' %}" alt=""></div>
+                    <div class="card-container">
+                        <div class="img-container"><img class="img" src="{% static 'img/prudy.svg' %}" alt=""></div>
                         <div class="white-card">
                             <div class="name">Prudence Ugochukwu</div>
                             <div class="role">Project Manager</div>
@@ -117,8 +118,8 @@
                 </div>
                 <!-- unflipCard-3 -->
                 <div id="unflipCard">
-                    <div class="card-conatiner">
-                        <div class="img-conatiner"><img class="img" src="{% static 'img/frontend_lead.svg' %}" alt=""></div>
+                    <div class="card-container">
+                        <div class="img-container"><img class="img" src="{% static 'img/frontend_lead.svg' %}" alt=""></div>
                         <div class="white-card">
                             <div class="name">Ridwan Oyenuga</div>
                             <div class="role">Front-End Engineer</div>
@@ -127,8 +128,8 @@
                 </div>
                 <!-- unflipCard-3 -->
                 <div id="unflipCard">
-                    <div class="card-conatiner">
-                        <div class="img-conatiner"><img class="img" src="{% static 'img/prd_designer.svg' %}" alt=""></div>
+                    <div class="card-container">
+                        <div class="img-container"><img class="img" src="{% static 'img/prd_designer.svg' %}" alt=""></div>
                         <div class="white-card">
                             <div class="name">Philip Adewale</div>
                             <div class="role">UI/UX Designer</div>
@@ -137,8 +138,8 @@
                 </div>
                 <!-- unflipCard-3 -->
                 <div id="unflipCard">
-                    <div class="card-conatiner">
-                        <div class="img-conatiner"><img class="img" src="{% static 'img/misoma.svg' %}" alt=""></div>
+                    <div class="card-container">
+                        <div class="img-container"><img class="img" src="{% static 'img/misoma.svg' %}" alt=""></div>
                         <div class="white-card">
                             <div class="name">Misoma Abayeh</div>
                             <div class="role">Quality Assurance Engineer</div>
@@ -161,39 +162,65 @@
 
     <!-- footer-start -->
     <footer id="footer">
-        <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/allforms_logo.png' %}" alt="">.</a>
-        <div class="footer-contaier">
-            <div class="footer-heading">NEWSLETTER</div>
-            <div class="footer-description">
-                Want to know what we're up to? Signup for the News letter and join our
-                community.
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="{% url 'home' %}" class="nav-logo">
+              <img
+                src="{% static 'img/allforms_logo.png' %}"
+                alt="AllForms Logo"
+              />
+            </a>
+          </div>
+          <div class="footer-content">
+            <div class="newsletter">
+              <h3 class="footer-heading">Newsletter</h3>
+              <p class="footer-description">
+                Want to know what we're up to? Signup for the Newsletter and join
+                our community.
+              </p>
+              <form
+                id="subscribe-form"
+                onsubmit="sendEmail(); reset(); return false;"
+              >
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email here"
+                  autocomplete="email"
+                  required
+                />
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+              </form>
             </div>
-            <br>
-            <div id="subcribe">
-                <form onsubmit="sendEmail(); reset(); return false;">
-                   <br>
-                    <input type="email" id="email" placeholder="Enter your email here" autocomplete="email" required>
-                    <br><br>
-                    <button class="subscribe-btn" type="submit">Subscribe</button>
-                </form>
-                
+            <div class="contact-info">
+              <h3 class="footer-heading">Contact</h3>
+              <a href="mailto:founders@allformslimited.com" class="contact-email"
+                >founders@allformslimited.com</a
+              >
+              <div class="social-links">
+                <a href="mailto:founders@allformslimited.com"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+                <a href="tel:+2348137343312"><i class="fas fa-phone"></i></a>
+                <a href="https://web.facebook.com/allformsltd/" target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://twitter.com/allformsltd" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/allforms-limited/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="https://www.instagram.com/allformsltd/" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="conatct-info">
-            <div class="connect">CONTACT</div>
-            <a href="mailto:founders@allformslimited.com" class="visible">founders@allformslimited.com</a>
-            <br><br>
-            <div class="social-page">
-                <a href="mailto:founders@allformslimited.com"><i class="fas fa-envelope fa-2x"></i></a>
-                <a href="tel:+2348137343312"><i class="fas fa-phone fa-2x"></i></a>
-                <a href="https://web.facebook.com/allformsltd/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://twitter.com/allformsltd" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://www.linkedin.com/company/allforms-limited/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://www.instagram.com/allformsltd/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-            </div>
-        </div>
-        
-    </footer>
+      </footer>
     <!-- footer-end -->
     <script src="{% static 'script/main.js' %}"></script>
     <script src="{% static 'script/header.js' %}"></script>

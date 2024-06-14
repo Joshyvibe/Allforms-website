@@ -29,13 +29,25 @@ a {
 
 .hero-text {
   text-align: center;
-  margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 80px;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 28px;
-  background-color: rgba(38, 62, 33, 0.568);
-
 }
+
+.hero-text h1 {
+  font-size: 70px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero-text span { 
+  color: #4d7e3e;  
+}
+.hero-text .more-p { 
+  margin: 20px; 
+}
+
+
+
 
 /* basic styles for other element */
 
@@ -53,18 +65,18 @@ a {
 .nav-link {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #fff;
+  color: rgb(35, 35, 35);
 }
 
 .nav-link:hover {
-  color: #482ff7;
+  color: #4d7e3e;
 }
 
 .nav-logo img {
   width: 160px;
   font-weight: 500;
   margin-right: 70px;
-  color: #482ff7;
+  
 }
 
 /* basic styles for other element */
@@ -72,22 +84,13 @@ a {
 /* header and navbar */
 .header {
   border-bottom: 1px solid #e2e8f0;
-  height: 700px;
+  height: auto;
   background-repeat: no-repeat;
-  background-image: url("./tech-hero.png");
+  background-color: rgb(219, 215, 215);
   background-size: 100% 100%;
   color: var(--white);
 
 }
-.header-about {
-  border-bottom: 1px solid #e2e8f0;
-  height: 550px;
-  background-image: url("./hero-about.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: var(--white);
-}
-
 
 
 .about-hero-h1 {
@@ -105,16 +108,27 @@ a {
   white-space: pre-line; 
   text-align: center;
   color: #131010;
+  margin: 20px;
 }
+
+#team{
+  background-color: #4d7e3e;
+}
+
 
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 2rem 2rem;
   font-family: 'Space Grotesk', sans-serif;
   margin: 0 auto;
+  max-width: 500px;
+  background-color: whitesmoke; 
+  border-radius: 50px;
+  
+  
 }
 /* header and navbar */
 
@@ -122,8 +136,8 @@ a {
 
 .hamburger {
   display: none;
-  margin-bottom: 20px;
-  margin-right: 10px;
+  margin-top: 5px;
+  color: #131010;
 }
 
 .bar {
@@ -133,7 +147,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: white;
+  background-color: #4d7e3e;;
 }
 
 /* .hamburger */
@@ -144,16 +158,14 @@ a {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: var(--primary-clr);
+    background-color: rgba(249, 247, 247, 0.783);
     width: 100%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
   }
 
-  .header {
-    height: 200px;
-  }
+  
   .nav-menu.active {
     left: 0;
   }
@@ -162,15 +174,22 @@ a {
     margin: 2.5rem 0;
   }
   .hero-text {
-    margin-top: 50px;
-    font-size: 14px;
+    margin-top: 20px;
+  }
+  .hero-text h1{
+    font-size: 35px;
   }
  .about-hero-h1{
-  font-size: 30px;
+  margin-top: 20px;
+  font-size: 25px;
+  margin-bottom: 10px;
  }
 
  .about-p{
   font-size: 12.5px;
+  line-height: 1.5;
+  white-space:normal;
+  margin: 10px; 
  }
   .nav-link {
     font-size: 1.6rem;
