@@ -31,23 +31,10 @@ a {
   text-align: center;
   margin-top: 80px;
   font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  background-color: rgba(38, 62, 33, 0.568);
+
 }
-
-.hero-text h1 {
-  font-size: 70px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.hero-text span { 
-  color: #4d7e3e;  
-}
-.hero-text .more-p { 
-  margin: 20px; 
-}
-
-
-
 
 /* basic styles for other element */
 

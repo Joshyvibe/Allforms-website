@@ -20,13 +20,10 @@
       type="image/x-icon"
     />
 
-    <link
-      rel="stylesheet"
-      href="{% static 'styles/components/home-header.css' %}"
-    />
-
+    <link rel="stylesheet" href="{% static 'styles/components/home-header.css' %}">
+    
     <title>Home</title>
-  </head>
+</head>
 
   <body>
     <!-- hero-section start -->
@@ -65,17 +62,31 @@
     <main>
       <!-- company-section end -->
 
-      <section id="project-section">
-        <h1 class="latest-news">Latest Projects</h1>
-    
-        <div id="card">
-            <div id="slideWrapper">
-                <a href="https://anwrk.com" target="_blank" class="project-link">
-                    <img class="project-image" src="{% static 'img/anwrk.png' %}" alt="Anwrk Project" />
-                </a>
+        <section id="project-section">
+            <h1 class="latest-news">Latest Projects</h1>
+
+            <div id="card">
+                <div id="slideWrapper">
+
+                    <div class="image-slide-1">
+                        <a href="{% url 'coming_soon' %}" target="_blank">
+                            <img class="project-image" src="{% static 'img/anwrk.png' %}" alt="">
+                            <button class="latest-proj-btn">Go to site</button>
+                            
+                        </a>
+                        
+                    </div>
+                    <!-- <div class="project-1">Project 1</div>
+                    <div class="project-description">
+                        A develop tool or system that enhances cybersecurity, such as an intrusion detection system or a
+                        secure communication
+                        platform. Explore blockchain technology and develop a decentralized application (DApp).
+                    </div> -->
+
+                </div>
             </div>
-        </div>
-      </section>
+        </section>
+        <br><br>
 
 
       <!-- news-section start -->
