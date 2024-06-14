@@ -354,6 +354,12 @@ main {
 
 }
 
+.fa-envelope, .fa-facebook, .fa-twitter, .fa-linkedin, .fa-instagram, .fa-phone{
+  font-size: large;
+  color: white;
+}
+
+
 .subscribe-btn:hover{
   background-color: #25481b;
 
