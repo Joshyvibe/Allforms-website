@@ -1,5 +1,4 @@
 ﻿asgiref==3.7.2
-beautifulsoup4==4.12.3
 certifi==2023.11.17
 charset-normalizer==3.3.2
 colorama==0.4.6
@@ -7,7 +6,6 @@ Django==5.0.1
 filelock==3.13.1
 idna==3.6
 lxml==5.1.0
-ntscraper==0.3.11
 oauthlib==3.2.2
 PySocks==1.7.1
 requests==2.31.0
