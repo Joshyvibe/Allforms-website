@@ -1,27 +1,21 @@
 from django.shortcuts import render
-from ntscraper import Nitter
 
 import json
 
 
-# Check if the tweets are already saved in a file
 try:
+    # Try to open the cached tweets file
     with open('tweets_cache.json', 'r') as file:
         the_tweets = json.load(file)
     print("Loaded tweets from cache.")
-except FileNotFoundError:
-    # If the file is not found, scrape the tweets and save them to a file
-    the_tweets = []
-    scraper = Nitter()
-    tweets = scraper.get_tweets('allformsltd', mode='user', number=5)
-    for tweet in tweets['tweets']:
-        data = [tweet['link'], tweet['text'], tweet['user']['avatar'], tweet['date']]
-        the_tweets.append(data)
 
-    # Save the tweets to a file
-    with open('tweets_cache.json', 'w') as file:
-        json.dump(the_tweets, file, indent=2)
-    print("Scraped tweets and saved to cache.")
+except FileNotFoundError:
+    # If the file is not found, handle the exception
+    print("Error: tweets_cache.json not found. Please ensure the file exists.")
+
+    # Optionally, define a default behavior or initialize an empty list
+    the_tweets = []
+
 
 # Access the first tweet
 #if the_tweets:
